@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>webrtc</title><style>
+    body {
+        background-color: #BEE8E7;
+        margin-top: 15px;
+        font-family: sans-serif;
+        color: white;
+    }
+    video {
+        background: black;
+        border: 1px solid gray;
+    }
+    .page {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+    }
+    #yours {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    #theirs {
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+    }
+    button{
+        padding: 6px 12px;
+    }
+    input{
+        line-height: 28px;
+    }
+</style>
+</head>
+<body>
+<div id="login-page" class="page">
+  <h2>Login As</h2>
+  <input type="text" id="username" />
+  <button id="login">Login</button>
+</div>
+<div id="call-page" class="page">
+  <video id="yours" autoplay=""></video>
+  <video id="theirs" autoplay=""></video>
+  <input type="text" id="their-username" />
+  <button id="call">呼叫</button>
+  <button id="hang-up">挂断</button>
+</div>
+<script src="./client.js"></script>
+</body>
+</html>
